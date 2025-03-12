@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}{{title}}{% endblock title %}
+
+{% block content %}
+
+    <div class="container my-4">
+        <h1>Hello {{user_name}}</h1>
+    </div>
+
+    {% if logedIn %}
+        {% for language in  languages%}
+            <h3>{{forloop.counter}}. {{language}}</h3>
+        {% endfor %}
+        {% else %}
+            <p>You need to logIn</p>
+    {% endif %}
+
+{% endblock content %}
+
+
+
+
+<!---
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static "style.css" %}">
+</head>
+<body>
+    <h1>Hello World</h1>
+    <img src="{% static "img.png" %}}" alt="image">
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita nisi quae consequuntur iure dolorem dolor atque laudantium aspernatur consectetur facere, non placeat officiis at error pariatur porro omnis minima dolorum.</p>
+</body>
+</html>
+-->

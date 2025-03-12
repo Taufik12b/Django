@@ -1,0 +1,21 @@
+# Ignore media files
+/media/
+uploads/
+images/
+
+# Python-related files
+*.pyc
+__pycache__/
+
+# Django-related files
+db.sqlite3
+*.log
+
+# Environment variables
+.env
+
+# VSCode settings
+.vscode/
+
+# MacOS system files
+.DS_Store

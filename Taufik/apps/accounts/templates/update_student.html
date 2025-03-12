@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+      <h1 class="text-center">Update a Student</h1>
+        <form method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+            <div class="mb-3">
+              <label for="name" class="form-label">Stundent Name</label>
+              <input type="text" class="form-control" name="name" id="name" aria-describedby="emailHelp" value="{{student.name}}">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{student.email}}">
+            </div> 
+            <div class="mb-3">
+              <label for="age" class="form-label">Age</label>
+              <input type="number" class="form-control" name="age" id="age" value="{{student.age}}">
+            </div>
+            <div class="mb-3">
+              <label for="image" class="form-label">Image</label>
+              <img src="{{student.image.url}}" alt="" style="width:150px; height:auto; display:block; margin-bottom:10px">
+              <input type="file" class="form-control" name="image" id="image">
+            </div>
+            <div class="mb-3">
+              <label for="branch" class="form-label">Branch</label>
+              <select class="form-select" name="branch"  id="branch" aria-label="Default select example">
+                <option selected>{{student.branch}}</option>
+                <option value="CS">Computer Science</option>
+                <option value="AI">Artificial Intelligence</option>
+                <option value="DS">Data Science</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+{% endblock content %}
