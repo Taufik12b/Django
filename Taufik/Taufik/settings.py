@@ -40,8 +40,7 @@ INSTALLED_APPS = [
     'apps.accounts',
     'apps.relationship',
     'apps.contact',
-    'apps.media_app',
-    'rest_framework'
+    'apps.media_app'
 ]
 
 MIDDLEWARE = [
